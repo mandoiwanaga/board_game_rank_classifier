@@ -16,6 +16,8 @@ There is an awesome and robust community online who regularly rates board games 
 ### Data Source & Preparation
 We used a mix of API calls and web scraping to derive our data from BoardGameGeek.com to obtain a dataset of all new games released in the past 4 years (2014-2018). We used the top 25% of this set of data as our target. The scores on the site can be quite strict (the highest ever by a game out of 10 being 8.5), so binary classification of the ratings made the most sense to help look for trends.  We factored in several features such as player count, weight (a reviewer given rating of complexity), themes, and game mechanic elements. 
 
+![Alt text](images/bgg_website.png?raw=true "Title")
+
 ### Modeling & Evaluation
 We tried several classification models (Descision Trees, Random Forest, XGBoost, Logistic Regression) to find which worked best achieve a good score in our key metrics (focusing primarily on Log Loss and ROC AUC Score). The model we found that performed the best was a Gradient Boosting Classifier model, giving an ROC Score of .75.  We cross validated our model and performed hyperparameter tuning to help improve our score. 
 
